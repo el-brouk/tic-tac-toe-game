@@ -183,6 +183,10 @@ function turnText() {
 
     document.getElementById('move-count').innerText = (`Moves Left: ${moves}`);
   moves--;
+    if (moves == 0) {
+        window.alert("It's a draw!");
+        document.getElementById("field").disabled = true;
+    }
   }
 // reset panel values to default values
 
