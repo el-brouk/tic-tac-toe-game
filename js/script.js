@@ -183,7 +183,7 @@ function turnText() {
 
     document.getElementById('move-count').innerText = (`Moves Left: ${moves}`);
   moves--;
-    if (moves == 0) {
+    if (moves == -2 ) {
         window.alert("It's a draw!");
         document.getElementById("field").disabled = true;
     }
