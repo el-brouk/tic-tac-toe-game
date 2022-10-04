@@ -180,12 +180,12 @@ function turnText() {
     } else {
     document.getElementById('next-player').textContent = "Turn Played By: X";
     }
-
+    document.getElementById('move-count').innerText = (`Moves Left: ${moves}`);
     if (moves == 0 ) {
         window.alert("It's a draw!");
         return;
     } else {
-        document.getElementById('move-count').innerText = (`Moves Left: ${moves}`);
+        
       moves--;  
     }
     
