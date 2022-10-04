@@ -181,11 +181,10 @@ function turnText() {
     document.getElementById('next-player').textContent = "Turn Played By: X";
     }
     document.getElementById('move-count').innerText = (`Moves Left: ${moves}`);
-    if (moves == 0 ) {
+    if ( !checkWin && moves == 0 ) {
         window.alert("It's a draw!");
         return;
-    } else {
-        
+    } else {  
       moves--;  
     }
     
@@ -203,6 +202,7 @@ function checkWin() {
             b8.disabled = true;
             b9.disabled = true;
         window.alert('Player X won');
+     
     } else if ((b1.textContent == '0') && (b2.textContent == '0') && (b3.textContent == '0')) {           
             b4.disabled = true;
             b5.disabled = true;
@@ -211,6 +211,7 @@ function checkWin() {
             b8.disabled = true;
             b9.disabled = true;
         window.alert('Player O won');
+      
     } else if ((b1.textContent == 'X') && (b4.textContent == 'X') && (b7.textContent == 'X')) {           
             b2.disabled = true;
             b3.disabled = true;
@@ -219,6 +220,7 @@ function checkWin() {
             b8.disabled = true;
             b9.disabled = true;
         window.alert('Player X won');
+       
     } else if ((b1.textContent == '0') && (b4.textContent == '0') && (b7.textContent == '0')) {           
             b2.disabled = true;
             b3.disabled = true;
@@ -227,6 +229,7 @@ function checkWin() {
             b8.disabled = true;
             b9.disabled = true;
         window.alert('Player O won');
+     
     } else if ((b7.textContent == 'X') && (b8.textContent == 'X') && (b9.textContent == 'X')) {           
             b1.disabled = true;
             b2.disabled = true;
@@ -235,6 +238,7 @@ function checkWin() {
             b5.disabled = true;
             b6.disabled = true;
         window.alert('Player X won');
+     
     } else if ((b7.textContent == '0') && (b8.textContent == '0') && (b9.textContent == '0')) {           
             b1.disabled = true;
             b2.disabled = true;
@@ -243,6 +247,7 @@ function checkWin() {
             b5.disabled = true;
             b6.disabled = true;
         window.alert('Player O won');
+     
     } else if ((b3.textContent == 'X') && (b6.textContent == 'X') && (b9.textContent == 'X')) {           
             b1.disabled = true;
             b2.disabled = true;
@@ -251,6 +256,7 @@ function checkWin() {
             b7.disabled = true;
             b8.disabled = true;
         window.alert('Player X won');
+      
     } else if ((b3.textContent == '0') && (b6.textContent == '0') && (b9.textContent == '0')) {           
             b1.disabled = true;
             b2.disabled = true;
@@ -259,6 +265,7 @@ function checkWin() {
             b7.disabled = true;
             b8.disabled = true;
         window.alert('Player O won');
+    
     } else if ((b1.textContent == 'X') && (b5.textContent == 'X') && (b9.textContent == 'X')) {           
             b2.disabled = true;
             b3.disabled = true;
@@ -267,6 +274,7 @@ function checkWin() {
             b7.disabled = true;
             b8.disabled = true;
         window.alert('Player X won');
+     
     } else if ((b1.textContent == '0') && (b5.textContent == '0') && (b9.textContent == '0')) {           
             b2.disabled = true;
             b3.disabled = true;
@@ -275,6 +283,7 @@ function checkWin() {
             b7.disabled = true;
             b8.disabled = true;
         window.alert('Player O won');
+     
     } else if ((b3.textContent == 'X') && (b5.textContent == 'X') && (b7.textContent == 'X')) {           
             b1.disabled = true;
             b2.disabled = true;
@@ -283,6 +292,7 @@ function checkWin() {
             b8.disabled = true;
             b9.disabled = true;
         window.alert('Player X won');
+       
     } else if ((b3.textContent == '0') && (b5.textContent == '0') && (b7.textContent == '0')) {           
             b1.disabled = true;
             b2.disabled = true;
@@ -291,6 +301,7 @@ function checkWin() {
             b8.disabled = true;
             b9.disabled = true;
         window.alert('Player O won');
+      
     } else if ((b2.textContent == 'X') && (b5.textContent == 'X') && (b8.textContent == 'X')) {           
             b1.disabled = true;
             b3.disabled = true;
@@ -299,6 +310,7 @@ function checkWin() {
             b7.disabled = true;
             b9.disabled = true;
         window.alert('Player X won');
+      
     } else if ((b2.textContent == '0') && (b5.textContent == '0') && (b8.textContent == '0')) {           
             b1.disabled = true;
             b3.disabled = true;
@@ -307,6 +319,7 @@ function checkWin() {
             b7.disabled = true;
             b9.disabled = true;
         window.alert('Player O won');
+       
     } else if ((b4.textContent == 'X') && (b5.textContent == 'X') && (b6.textContent == 'X')) {           
             b1.disabled = true;
             b2.disabled = true;
@@ -315,6 +328,7 @@ function checkWin() {
             b8.disabled = true;
             b9.disabled = true;
         window.alert('Player X won');
+        
     } else if ((b4.textContent == '0') && (b5.textContent == '0') && (b6.textContent == '0')) {           
             b1.disabled = true;
             b2.disabled = true;
@@ -323,6 +337,7 @@ function checkWin() {
             b8.disabled = true;
             b9.disabled = true;
         window.alert('Player O won');
+
     } 
 }
 // announce winner
@@ -362,4 +377,4 @@ function restartGame() {
 // bind events to clickable buttons
 //function enableButtons() {}
 
-module.exports = play;
+//module.exports = play;
