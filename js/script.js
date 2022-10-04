@@ -181,12 +181,15 @@ function turnText() {
     document.getElementById('next-player').textContent = "Turn Played By: X";
     }
 
-    document.getElementById('move-count').innerText = (`Moves Left: ${moves}`);
-  moves--;
-    if (moves == -2 ) {
+    if (moves == 0 ) {
         window.alert("It's a draw!");
-        document.getElementById("field").disabled = true;
+        return;
+    } else {
+        document.getElementById('move-count').innerText = (`Moves Left: ${moves}`);
+      moves--;  
     }
+    
+    
   }
 // reset panel values to default values
 
